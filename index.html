@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TANUUUUU</title>
-  <style>
-    /* Body and background */
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f0f8ff;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANUUUUU</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e6f3ff;
+        }
 
-    /* Heading styling */
-    h1 {
-      font-size: 6rem;
-      color: #ff1493; /* Pink color */
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    }
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #ff69b4;
+            border-radius: 50%;
+            animation: grow 3s ease-in-out infinite alternate;
+        }
 
-    /* Flower base styling */
-    .flower {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background-color: #ff1493;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: float 10s ease-in-out infinite;
-    }
+        .flower::before, .flower::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 60px;
+            background: #ff69b4;
+            border-radius: 0 0 50% 50%;
+            top: -30px;
+        }
 
-    /* Flower petal styles */
-    .flower::before,
-    .flower::after {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 50px;
-      background-color: #ff1493;
-      border-radius
+        .flower::before {
+            left: 5px;
+            transform: rotate(-45deg);
+        }
+
+        .flower::after {
+            right: 5px;
+            transform: rotate(45deg);
+        }
+
+        .flower:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .flower:nth-child(2) { left: 40%; top: 60%; animation-delay: 1s; }
+        .flower:nth-child(3) { left: 70%; top: 30%; animation-delay: 2s; }
+
+        @keyframes grow {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+
+        .pink-text {
+            font-size: 3em;
+            color: #ff69b4;
+            text-align: center;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="pink-text">Only for TANUUUUU</div>
+</body>
+</html>
