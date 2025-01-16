@@ -3,94 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TANUUUUU</title>
+    <title>TANUU</title>
     <style>
         body {
+            background-color: #f0e1f1;
+            color: pink;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 3em;
+        }
+        .hearts {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .dog-images img {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .dog-images {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #e6f3ff;
-        }
-
-        .flower {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            animation: spin 5s linear infinite;
-        }
-
-        .flower::before, .flower::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 40px;
-            background: #ff69b4;
-            border-radius: 0 0 50% 50%;
-            left: 15px;
-        }
-
-        .flower::before {
-            top: -20px;
-            transform: rotate(-30deg);
-        }
-
-        .flower::after {
-            top: -20px;
-            transform: rotate(30deg);
-        }
-
-        .flower .petal {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background: #ff69b4;
-            border-radius: 50%;
-            top: 10px;
-        }
-
-        .flower .petal:nth-child(1) { left: -5px; }
-        .flower .petal:nth-child(2) { right: -5px; }
-        .flower .petal:nth-child(3) { left: 10px; top: -10px; }
-        .flower .petal:nth-child(4) { right: 10px; top: -10px; }
-
-        .flower:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-        .flower:nth-child(2) { left: 40%; top: 60%; animation-delay: 1s; }
-        .flower:nth-child(3) { left: 70%; top: 30%; animation-delay: 2s; }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .pink-text {
-            font-size: 3em;
-            color: #ff69b4;
-            text-align: center;
-            z-index: 1;
+            flex-wrap: wrap;
         }
     </style>
 </head>
 <body>
-    <div class="flower">
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
+
+    <h1>TANUUUU</h1>
+
+    <div class="hearts">
+        ❤️💖💗💘💝💞
     </div>
-    <div class="flower">
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
+
+    <div class="dog-images">
+        <img src="https://placedog.net/300/300?id=1" alt="Cute Dog 1">
+        <img src="https://placedog.net/300/300?id=2" alt="Cute Dog 2">
+        <img src="https://placedog.net/300/300?id=3" alt="Cute Dog 3">
     </div>
-    <div class="flower">
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
+
+    <div class="hearts">
+        💓💕💌💗💖💘
     </div>
-    <div class="pink-text">TANUUUUUU</div>
+
 </body>
 </html>
