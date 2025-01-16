@@ -18,38 +18,50 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background: #ff69b4;
-            border-radius: 50%;
-            animation: grow 3s ease-in-out infinite alternate;
+            animation: spin 5s linear infinite;
         }
 
         .flower::before, .flower::after {
             content: '';
             position: absolute;
             width: 20px;
-            height: 60px;
+            height: 40px;
             background: #ff69b4;
             border-radius: 0 0 50% 50%;
-            top: -30px;
+            left: 15px;
         }
 
         .flower::before {
-            left: 5px;
-            transform: rotate(-45deg);
+            top: -20px;
+            transform: rotate(-30deg);
         }
 
         .flower::after {
-            right: 5px;
-            transform: rotate(45deg);
+            top: -20px;
+            transform: rotate(30deg);
         }
+
+        .flower .petal {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #ff69b4;
+            border-radius: 50%;
+            top: 10px;
+        }
+
+        .flower .petal:nth-child(1) { left: -5px; }
+        .flower .petal:nth-child(2) { right: -5px; }
+        .flower .petal:nth-child(3) { left: 10px; top: -10px; }
+        .flower .petal:nth-child(4) { right: 10px; top: -10px; }
 
         .flower:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
         .flower:nth-child(2) { left: 40%; top: 60%; animation-delay: 1s; }
         .flower:nth-child(3) { left: 70%; top: 30%; animation-delay: 2s; }
 
-        @keyframes grow {
-            from { transform: scale(1); }
-            to { transform: scale(1.2); }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .pink-text {
@@ -61,9 +73,24 @@
     </style>
 </head>
 <body>
-    <div class="flower"></div>
-    <div class="flower"></div>
-    <div class="flower"></div>
-    <div class="pink-text">Only for TANUUUUU</div>
+    <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+    <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+    <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+    <div class="pink-text">TANUUUUUU</div>
 </body>
 </html>
