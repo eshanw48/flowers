@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TANUU</title>
+    <title>Pink Hearts and Flowers</title>
     <style>
         body {
             background-color: #f0e1f1;
@@ -20,31 +20,50 @@
             font-size: 2em;
             margin: 20px 0;
         }
-        .dog-images img {
-            width: 300px;
+        /* Animation for the flowers */
+        .flower-images img {
+            width: 200px;
             height: auto;
-            margin: 10px;
+            margin: 20px;
             border-radius: 10px;
+            animation: bloom 4s ease-in-out infinite;
         }
-        .dog-images {
+
+        @keyframes bloom {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .flower-images {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
+
     </style>
 </head>
 <body>
 
-    <h1>TANUUUU</h1>
+    <h1>Pink Hearts and Blooming Flowers!</h1>
 
     <div class="hearts">
         ❤️💖💗💘💝💞
     </div>
 
-    <div class="dog-images">
-        <img src="https://placedog.net/300/300?id=1" alt="Cute Dog 1">
-        <img src="https://placedog.net/300/300?id=2" alt="Cute Dog 2">
-        <img src="https://placedog.net/300/300?id=3" alt="Cute Dog 3">
+    <div class="flower-images">
+        <img src="https://www.pexels.com/photo/close-up-photo-of-purple-flower-1666078/" alt="Blooming Flower 1">
+        <img src="https://www.pexels.com/photo/selective-focus-photography-of-yellow-and-pink-flower-1122224/" alt="Blooming Flower 2">
+        <img src="https://www.pexels.com/photo/selective-focus-photography-of-pink-flowers-during-daytime-1554021/" alt="Blooming Flower 3">
     </div>
 
     <div class="hearts">
