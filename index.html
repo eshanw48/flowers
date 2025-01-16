@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Flowers - TANU</title>
+  <style>
+    /* Body and background */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f8ff;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Heading styling */
+    h1 {
+      font-size: 6rem;
+      color: #ff1493; /* Pink color */
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Flower animation */
+    .flower {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #ff1493;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: float 10s infinite;
+    }
+
+    /* Animating flowers */
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0);
+      }
+      50% {
+        transform: translateY(-100px) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0) rotate(360deg);
+      }
+    }
+
+    /* Generating random positions and delays for each flower */
+    .flower:nth-child(1) {
+      left: 10%;
+      top: 20%;
+      animation-delay: 0s;
+    }
+
+    .flower:nth-child(2) {
+      left: 40%;
+      top: 50%;
+      animation-delay: 1s;
+    }
+
+    .flower:nth-child(3) {
+      left: 70%;
+      top: 30%;
+      animation-delay: 2s;
+    }
+
+    .flower:nth-child(4) {
+      left: 25%;
+      top: 70%;
+      animation-delay: 3s;
+    }
+
+    .flower:nth-child(5) {
+      left: 60%;
+      top: 80%;
+      animation-delay: 4s;
+    }
+
+    .flower:nth-child(6) {
+      left: 80%;
+      top: 40%;
+      animation-delay: 5s;
+    }
+  </style>
+</head>
+<body>
+  <h1>TANU</h1>
+
+  <!-- Flower Elements -->
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+  <div class="flower"></div>
+
+</body>
+</html>
